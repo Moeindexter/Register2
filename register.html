@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <!-- لینک فونت -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta:wght@400;700&family=Style+Script&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* جلوگیری از نمایش scroll bar قبل از نمایش صفحه */
+            overflow: hidden; 
         }
 
         .preloader {
@@ -32,7 +32,7 @@
             z-index: 9999;
             width: 100vw;
             height: 100vh;
-            background: #000; /* بکگراند کامل سیاه */
+            background: #000; 
         }
 
         .preloader span {
@@ -151,7 +151,7 @@
           setTimeout(function () {
               document.querySelector('.preloader').style.display = 'none';
               document.querySelector('.content').style.display = 'block';
-              document.body.style.overflow = 'visible'; /* نمایش scroll bar بعد از نمایش صفحه */
+              document.body.style.overflow = 'visible'; 
   
               // تصویر پس‌زمینه به عنوان بک‌گراند سایت
               document.body.style.background = 'url("https://s8.uupload.ir/files/wp4676582_jdzp.jpg") center/cover no-repeat';
