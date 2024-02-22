@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <!-- لینک فونت -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta:wght@400;700&family=Style+Script&display=swap" rel="stylesheet">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <title>Preloader</title>
+    <link rel="stylesheet" href="csss.css">
+
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* جلوگیری از نمایش scroll bar قبل از نمایش صفحه */
+        }
+
+        .preloader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            width: 100vw;
+            height: 100vh;
+            background: #000; /* بکگراند کامل سیاه */
+        }
+
+        .preloader span {
+            display: block;
+            height: 15px;
+            width: 15px;
+            background: #9932cc;
+            margin: 0 7px;
+            border-radius: 10px;
+            animation: 1.2s upDown infinite;
+        }
+
+        .preloader span:first-child {
+            animation-delay: 0.15s;
+        }
+
+        .preloader span:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .preloader span:nth-child(3) {
+            animation-delay: 0.45s;
+        }
+
+        .preloader span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .preloader span:last-child {
+            animation-delay: 0.75s;
+        }
+
+        @keyframes upDown {
+            0% {
+                height: 15px;
+                background: #7700ffe1;
+            }
+
+            50% {
+                height: 60px;
+                background: #2d00f5;
+            }
+
+            100% {
+                height: 15px;
+                background: #9932cc;
+            }
+        }
+
+        .content {
+            display: none;
+        }
+
+        .background-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('https://images-ext-1.discordapp.net/external/1CyfIT6C4CFZ_tZQ1rRwTftaHe_pE6SGAFFCBxWFeL4/https/s8.uupload.ir/files/inline_image_preview_1zf2.png?format=webp&quality=lossless') center/cover no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="content">
+        <div class="login-box">
+
+            <form>
+              <div class="login-box">
+                <h2>Register</h2>
+                <form>
+                  <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Name</label>
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                    <label>Username</label>
+                    <div class="user-box">
+                    <input type="email" name="" required="">
+                <label>Email</label>
+                    <div class="user-box">
+                        <input type="password" name="" required="">
+                    <label>Password</label>
+                    <div class="user-box">
+                        <input type="password" name="" required="">
+                    <label>Confirm password</label>
+                  </div>
+                  <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                  </a>
+                </form>
+              </div>
+        
+        
+        
+            </form>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          setTimeout(function () {
+              document.querySelector('.preloader').style.display = 'none';
+              document.querySelector('.content').style.display = 'block';
+              document.body.style.overflow = 'visible'; /* نمایش scroll bar بعد از نمایش صفحه */
+  
+              // تصویر پس‌زمینه به عنوان بک‌گراند سایت
+              document.body.style.background = 'url("https://s8.uupload.ir/files/wp4676582_jdzp.jpg") center/cover no-repeat';
+          }, 3000);
+      });
+  </script>
+  
+</body>
+
+</html>
+
+
